@@ -1,15 +1,19 @@
 <?php
+$_emri = "reis";
+$_mbiemri = "surdulli";
 
-$_variable = "variabla <hr>" ;
+$_username = $_emri.$_mbiemri;
+echo $_username."<hr>";
 
-echo $_variable;
+$_string = "string";
+echo strlen($_string). "<hr>";
+ 
+$_string2 = "s t r i n g i";
+echo str_word_count($_string2). "<hr>";
 
-$_x = 1;
-$_y=23;
+$_string3 = "programming is not cool";
+echo str_replace("not", "very", $_string3). "<hr>";
 
-echo $_x + $_y."<hr>";
-echo $_x - $_y."<hr>";
-echo $_x * $_y."<hr>";
-echo $_x / $_y."<hr>";
-echo $_x % $_y."<hr>";
+$_string4 = "string5";
+echo strrev($_string4). "<hr>";
 ?>
