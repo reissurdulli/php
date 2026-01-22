@@ -1,57 +1,29 @@
-<?php
+<?php 
 
-// $_days = "tuesday";
+// phpinfo();
 
-// switch ($_days) {
-//     case 'monday':
-//         echo "its monday";
-//         break;
+// $x= "hello";
+// $y=1.12;
+// $z=5;
 
-//         case 'tuesday':
-//         echo "its tuesday";
-//         break;
-        
-//         case 'wednesday':
-//         echo "its wednesday";
-//         break;
-    
-//         case 'thursday':
-//         echo "its thursday";
-//         break;
-        
-//         case 'friday':
-//         echo "its friday";
-//         break;
-        
-//         case 'saturday':
-//         echo "its saturday";
-//         break;
-    
-//         case 'sunday':
-//         echo "its sunday";
-//         break;
-//     default:
-//         case "error";
-//         break;
+// echo gettype($x);
+// echo gettype($y);
+// echo gettype($z);
+
+// function printV(){
+//     echo "this is PHP".phpversion();
 // }
 
-$_number = 0;
+// printV();
 
-while ($_number <= 5) {
-    echo "the number is $_number <hr>";
+function maximumi($x, $y){
+    if ($x>$y) {
+        return $x;
+    }else{
+        return $y;  
+        
+}}
 
-    $_number++;
-}
-
-$_number1 = 0;
-
-do {
-    echo "the number is $_number1 <hr>";
-
-    $_number1++;
-} while ($_number1 <= 5);
-
-for ($x=0; $x<=5 ; $x++) {
-    echo "the number x is $x <hr>";    
-}
+$test = maximumi(100, 101);
+echo $test;
 ?>
