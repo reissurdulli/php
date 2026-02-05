@@ -74,6 +74,9 @@ $reis = [
     "Ed qytetare"=> "2"
 ];
 
-echo "Math grade is".$reis['Math']
+echo "Math grade is".$reis['Math'];
 
+foreach($reis as $Subject => $reis) {
+    echo "Subject: ". $Subject. " Grade: ". $reis. "<hr>";
+}
 ?>
