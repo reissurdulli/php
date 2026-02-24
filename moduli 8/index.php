@@ -1,40 +1,32 @@
 <?php 
 
-
 $host = 'localhost';
-$db ='resturan sufjani';
+$db = 'testjora';
 $user = 'root';
 $password = '';
 
+try {
 
-
-try{
-
-    $conn = new PDO("mysql:host=$host; dbname=$db", $user, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
 
     $sql = "CREATE TABLE users(
         id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(30) NOT NULL,
         password VARCHAR(30) NOT NULL
-    )
-    
+    );
+
     INSERT INTO users(username, password) VALUES
-    ("lumi","6767"),
-    ("reis","surdulli"),
-    ("Jora","213098")
+    ('lumi','asddsadsa'),
+    ('reis','surdulli'),
+    ('Jora','213098');
     ";
 
     $conn->exec($sql);
 
     echo "Table created";
 
-}catch(Exeption $e){
+} catch (Exception $e) {
     echo "not connected";
 }
-
-
-
-
-
 
 ?>

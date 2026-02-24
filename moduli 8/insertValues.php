@@ -1,30 +1,17 @@
 <?php 
-$host = 'localhost';
-$db ='resturan sufjani';
-$user = 'root';
-$password = '';
+    try{
+            $pdo = new PDO("mysql:host=localhost;dbname=testjora", "root", "");
 
+            $username = "Jask";
 
+            $password = password_hash("mypassword", PASSWORD_DEFAULT);
 
-try{
+            $sql = "INSERT INTO users (username,password) VALUES ('$username', '$password')";
 
-    $conn = new PDO("mysql:host=$host; dbname=$db", $user, $password);
+            $pdo->exec($sql);
 
-    $username = "Reis";
-
-    $password = password_hash("mypassword", PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO user(username, password) VALUES ('$username', '$password')";
-
-    $conn->exec($sql)
-    echo "User CREATED"
-}catch(Exeption $e){
-    echo "User NOT CREATED";
-}
-
-
-
-
-
-
+            echo "new record created successfully";
+    } catch(PDOException $e){
+        echo $e->getMessage();
+    }
 ?>
