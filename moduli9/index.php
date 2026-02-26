@@ -16,7 +16,7 @@
     <title>My php form</title>
 </head>
 <body>
-    <form action="index.php" method="get">
+    <form action="config.php" method="get">
     <label for="Username" placeholder="Username">Username:</label><br>
     <input type="text" id="username" name="username"><br><br>
     <label for="Password" placeholder="Password">Password:</label><br>

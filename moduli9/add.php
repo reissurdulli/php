@@ -1,20 +1,21 @@
 <?php
 
-include_once ('config.php');
+include_once('config.php');
+
 if (isset($_POST['submit'])) {
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-    $sqlQuesry = $conn -> prepare($sql);
+    $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+    $sqlQuery = $connect->prepare($sql);
 
-    $sqlQuesry->bindParam(':username', $username);
-    $sqlQuesry->bindParam(':password', $password);
+    $sqlQuery->bindParam(':username', $username);
+    $sqlQuery->bindParam(':password', $password);
 
-    $sqlQuesry->execute();
-    echo "data saved succsessfully";    
+    $sqlQuery->execute();
 
+    echo "Data saved successfully";
 }
-
 
 ?>
