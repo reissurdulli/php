@@ -4,9 +4,9 @@
     $user = 'root';
     $pass = '';
 
-
     try{
-        $conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+
+        $conn = new PDO("mysql:host=$host; dbname=$db" , $user, $pass);
 
         $sql = "CREATE TABLE users(
             id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -27,28 +27,29 @@
             movie_image VARCHAR(255) NOT NULL
             );
 
-            CREATE TABLE bookings(
+            CREATE TABLE  bookings(
             id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
             user_id INT(6) NOT NULL,
             movie_id INT(6) NOT NULL,
             nr_tickets INT(6) NOT NULL,
-            data VARCHAR(255) NOT NULL,
+            date VARCHAR(255) NOT NULL,
             time VARCHAR(255) NOT NULL
             );
+        
         ";
+
+
 
 
         $conn->exec($sql);
 
-        echo "TABLE CREATED";
-        
-    }catch(Exeption $e){
 
+        echo "TABLE CREATED";
+
+    }catch(Exeption $e){
 
         echo "TABLE NOT CREATED";
 
-
     }
-
 
 ?>
